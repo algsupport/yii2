@@ -22,24 +22,15 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=8.2.0",
         "ext-mbstring": "*",
         "ext-ctype": "*",
         "lib-pcre": "*",
-        "yiisoft/yii2-composer": "~2.0.4",
-        "ezyang/htmlpurifier": "^4.6",
-        "cebe/markdown": "~1.0.0 | ~1.1.0 | ~1.2.0",
-        "bower-asset/jquery": "^3.7.1",
-        "bower-asset/inputmask": "^5.0.8 ",
-        "bower-asset/punycode": "^2.2",
+        "yiisoft/yii2-composer": "*",
+        "ezyang/htmlpurifier": "*",
+        "cebe/markdown": "*",
         "paragonie/random_compat": ">=1"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "yii\\": "framework/"
