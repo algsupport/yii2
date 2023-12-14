@@ -1,69 +1,26 @@
 {
-    "name": "algsupport/yii2-dev",
-    "description": "Yii PHP Framework Version 2 - Development Package",
+    "name": "algsupport/yii2",
+    "description": "Yii PHP Framework Version 2 - ALGSupport adapted",
     "keywords": [
         "yii2",
         "framework"
     ],
-    "homepage": "https://www.yiiframework.com/",
+    "homepage": "https://www.algsupport.com/",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "Qiang Xue",
-            "email": "qiang.xue@gmail.com",
-            "homepage": "https://www.yiiframework.com/",
+            "name": "Albert Gukasian",
+            "email": "admin@algusupport.com",
+            "homepage": "https://www.algsupport.com/",
             "role": "Founder and project lead"
         },
-        {
-            "name": "Alexander Makarov",
-            "email": "sam@rmcreative.ru",
-            "homepage": "https://rmcreative.ru/",
-            "role": "Core framework development"
-        },
-        {
-            "name": "Maurizio Domba",
-            "homepage": "http://mdomba.info/",
-            "role": "Core framework development"
-        },
-        {
-            "name": "Carsten Brandt",
-            "email": "mail@cebe.cc",
-            "homepage": "https://www.cebe.cc/",
-            "role": "Core framework development"
-        },
-        {
-            "name": "Timur Ruziev",
-            "email": "resurtm@gmail.com",
-            "homepage": "http://resurtm.com/",
-            "role": "Core framework development"
-        },
-        {
-            "name": "Paul Klimov",
-            "email": "klimov.paul@gmail.com",
-            "role": "Core framework development"
-        },
-        {
-            "name": "Dmitry Naumenko",
-            "email": "d.naumenko.a@gmail.com",
-            "role": "Core framework development"
-        },
-        {
-            "name": "Boudewijn Vahrmeijer",
-            "email": "info@dynasource.eu",
-            "homepage": "http://dynasource.eu",
-            "role": "Core framework development"
-        }
     ],
     "support": {
         "issues": "https://github.com/algsupport/yii2/issues?state=open",
-        "forum": "https://forum.yiiframework.com/",
-        "wiki": "https://www.yiiframework.com/wiki",
-        "irc": "ircs://irc.libera.chat:6697/yii",
         "source": "https://github.com/algsupport/yii2"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "minimum-stability": "stable",
     "replace": {
         "algsupport/yii2": "self.version"
     },
@@ -72,17 +29,13 @@
         "ext-mbstring": "*",
         "ext-ctype": "*",
         "lib-pcre": "*",
-        "algsupport/yii2-composer": "~2.0.4",
+        "yiisoft/yii2-composer": "~2.0.4",
         "ezyang/htmlpurifier": "^4.6",
         "cebe/markdown": "~1.0.0 | ~1.1.0 | ~1.2.0",
         "bower-asset/jquery": "^3.7.0",
         "bower-asset/inputmask": "^5.0.8 ",
         "bower-asset/punycode": "^2.2",
         "paragonie/random_compat": ">=1"
-    },
-    "require-dev": {
-        "cebe/indent": "~1.0.2",
-        "friendsofphp/php-cs-fixer": "~2.2.3 | ^3.0",
     },
     "repositories": [
         {
@@ -98,14 +51,6 @@
     "config": {
         "allow-plugins": {
             "yiisoft/yii2-composer": true
-        }
-    },
-    "bin": [
-        "framework/yii"
-    ],
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0.x-dev"
         }
     }
 }
