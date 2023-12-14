@@ -14,7 +14,7 @@
             "email": "admin@algusupport.com",
             "homepage": "https://www.algsupport.com/",
             "role": "Founder and project lead"
-        },
+        }
     ],
     "support": {
         "issues": "https://github.com/algsupport/yii2/issues?state=open",
