@@ -21,9 +21,6 @@
         "source": "https://github.com/algsupport/yii2"
     },
     "minimum-stability": "stable",
-    "replace": {
-        "algsupport/yii2": "self.version"
-    },
     "require": {
         "php": ">=5.4.0",
         "ext-mbstring": "*",
