@@ -29,7 +29,8 @@
         "yiisoft/yii2-composer": "*",
         "ezyang/htmlpurifier": "*",
         "cebe/markdown": "*",
-        "paragonie/random_compat": ">=1"
+        "paragonie/random_compat": ">=1",
+        "bower-asset/yii2-pjax": "~2.0.1"
     },
     "autoload": {
         "psr-4": {
