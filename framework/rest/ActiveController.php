@@ -9,7 +9,7 @@ namespace yii\rest;
 
 use yii\base\InvalidConfigException;
 use yii\base\Model;
-use yii\web\ForbiddenHttpException;
+use yii\db\ActiveRecord;
 
 /**
  * ActiveController implements a common set of actions for supporting RESTful access to ActiveRecord.
@@ -40,26 +40,27 @@ use yii\web\ForbiddenHttpException;
 class ActiveController extends Controller
 {
     /**
-     * @var string the model class name. This property must be set.
+     * @var class-string<ActiveRecord> the model class name. This property must be set.
      */
-    public $modelClass;
+    public string $modelClass;
     /**
      * @var string the scenario used for updating a model.
-     * @see \yii\base\Model::scenarios()
+     * @see Model::scenarios
      */
-    public $updateScenario = Model::SCENARIO_DEFAULT;
+    public string $updateScenario = Model::SCENARIO_DEFAULT;
     /**
      * @var string the scenario used for creating a model.
-     * @see \yii\base\Model::scenarios()
+     * @see Model::scenarios
      */
-    public $createScenario = Model::SCENARIO_DEFAULT;
+    public string $createScenario = Model::SCENARIO_DEFAULT;
 
 
-    /**
-     * {@inheritdoc}
-     */
-    public function init()
-    {
+	/**
+	 * {@inheritdoc}
+	 * @throws InvalidConfigException
+	 */
+    public function init(): void
+	{
         parent::init();
         if ($this->modelClass === null) {
             throw new InvalidConfigException('The "modelClass" property must be set.');
@@ -69,8 +70,8 @@ class ActiveController extends Controller
     /**
      * {@inheritdoc}
      */
-    public function actions()
-    {
+    public function actions(): array
+	{
         return [
             'index' => [
                 'class' => 'yii\rest\IndexAction',
@@ -108,8 +109,8 @@ class ActiveController extends Controller
     /**
      * {@inheritdoc}
      */
-    protected function verbs()
-    {
+    protected function verbs(): array
+	{
         return [
             'index' => ['GET', 'HEAD'],
             'view' => ['GET', 'HEAD'],
@@ -129,9 +130,8 @@ class ActiveController extends Controller
      * @param string $action the ID of the action to be executed
      * @param object|null $model the model to be accessed. If null, it means no specific model is being accessed.
      * @param array $params additional parameters
-     * @throws ForbiddenHttpException if the user does not have access
-     */
-    public function checkAccess($action, $model = null, $params = [])
+	 */
+    public function checkAccess(string $action, object $model = null, array $params = [])
     {
     }
 }
